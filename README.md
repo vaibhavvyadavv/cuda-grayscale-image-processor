@@ -16,3 +16,35 @@ This project implements a high-performance image processing pipeline using CUDA 
 - C++ (core implementation)
 
 ## 📂 Project Structure
+src/ → CUDA source code
+bin/ → Compiled executable
+data/input/ → Input images
+data/output/→ Output images
+
+
+## ⚙️ Build Instructions
+```bash
+make build
+▶️ Run
+./bin/project.exe
+📊 Output
+Grayscale images saved in data/output/
+Console displays:
+Images processed
+Total execution time
+🧠 How It Works
+
+Each pixel is processed in parallel using a CUDA kernel. The RGB values are converted to grayscale using the standard weighted formula. The workload is distributed across GPU threads, enabling faster processing compared to CPU execution.
+
+📈 Results
+
+The program successfully demonstrates GPU acceleration for image processing tasks and handles multiple images efficiently through batch processing.
+
+🎯 Learning Outcomes
+Understanding of CUDA programming model
+GPU memory management (cudaMalloc, cudaMemcpy)
+Kernel design for parallel computation
+Performance benchmarking
+👨‍💻 Author
+
+Vaibhav Yadav
