@@ -1,50 +1,38 @@
-# GPU-Accelerated Image Processing using CUDA
+# CUDA Image Processing Project
 
-## 🚀 Overview
-This project implements a high-performance image processing pipeline using CUDA for GPU acceleration. The system processes multiple images in batch and converts them to grayscale using a custom CUDA kernel.
+## Overview
+This project implements GPU-accelerated image processing using CUDA. The program converts multiple input images into grayscale using a custom CUDA kernel and processes them in batch.
 
-## ⚡ Key Features
-- GPU-based grayscale conversion using CUDA kernels
+## Features
+- GPU-based grayscale conversion using CUDA
 - Batch processing of multiple images
-- Parallel pixel-level computation
-- Performance measurement using C++ chrono
-- Efficient memory management between CPU and GPU
+- Performance timing using C++ chrono
+- Command-line executable
 
-## 🛠️ Tech Stack
-- CUDA (GPU programming)
-- OpenCV (image handling)
-- C++ (core implementation)
+## Project Structure
+- `src/` - Source code (main.cu)
+- `bin/` - Compiled executable
+- `data/input/` - Input images
+- `data/output/` - Output images
 
-## 📂 Project Structure
-src/ → CUDA source code
-bin/ → Compiled executable
-data/input/ → Input images
-data/output/→ Output images
+## Build Instructions
+Run the following command: make build
 
-
-## ⚙️ Build Instructions
-```bash
-make build
-▶️ Run
+## Run Instructions
 ./bin/project.exe
-📊 Output
-Grayscale images saved in data/output/
-Console displays:
-Images processed
-Total execution time
-🧠 How It Works
 
-Each pixel is processed in parallel using a CUDA kernel. The RGB values are converted to grayscale using the standard weighted formula. The workload is distributed across GPU threads, enabling faster processing compared to CPU execution.
 
-📈 Results
+## Output
+- Processed grayscale images are saved in `data/output/`
+- Terminal displays number of images processed and total execution time
 
-The program successfully demonstrates GPU acceleration for image processing tasks and handles multiple images efficiently through batch processing.
+## Technologies Used
+- CUDA (GPU computing)
+- OpenCV (image handling)
+- C++ (core logic)
 
-🎯 Learning Outcomes
-Understanding of CUDA programming model
-GPU memory management (cudaMalloc, cudaMemcpy)
-Kernel design for parallel computation
-Performance benchmarking
-👨‍💻 Author
+## Results
+The program successfully processes multiple images using GPU parallelism and demonstrates efficient batch processing.
 
+## Author
 Vaibhav Yadav
